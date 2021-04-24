@@ -37,10 +37,10 @@ def run_dncnn(x, image_chnls=3, depth=17, n_channels=64):
     return outputs
 
 
-def get_dncnn(image_size=32, image_chnls=3, depth=17, n_channels=64):
+def get_dncnn(data_augmentation, image_size=32, image_chnls=3,
+              depth=17, n_channels=64):
     inputs = layers.Input((image_size, image_size, image_chnls))
-    x = layers.experimental.preprocessing.Rescaling(scale=1.0 / 127.5,
-            offset=-1)(inputs)
+    x = data_augmentation(inputs)
     outputs = run_dncnn(x, depth=depth, n_channels=n_channels)
     outputs = layers.Subtract()([inputs, outputs])
     return tf.keras.Model(inputs, outputs)

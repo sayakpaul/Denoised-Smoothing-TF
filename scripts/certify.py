@@ -1,8 +1,8 @@
 # Reference: https://github.com/microsoft/denoised-smoothing/blob/master/code/certify.py
 
-import certification_utils
+from . import certification_utils
+from time import time
 import datetime
-import time
 import os
 
 SKIP = 20
@@ -23,7 +23,8 @@ def perform_certification_test(base_classifier, dataset, sigma,
 	print("idx\tlabel\tpredict\tradius\tcorrect\ttime", flush=True)
 	f.close()
 
-	for i in range(len(dataset)):
+	images, labels = dataset
+	for i in range(len(images)):
 
 		# only certify every args.skip examples, and stop after
 		# args.max examples
@@ -32,11 +33,10 @@ def perform_certification_test(base_classifier, dataset, sigma,
 		if i == MAX:
 			break
 
-		(x, label) = dataset[0][i], dataset[1][i]
+		(x, label) = images[i], labels[i]
 
 		before_time = time()
 		# certify the prediction of g around x
-		x = x.cuda()
 		prediction, radius = smoothed_classifier.certify(x, 100,
 														 10000,
 														 0.001,
@@ -55,5 +55,3 @@ def perform_certification_test(base_classifier, dataset, sigma,
 			i, label, prediction, radius, correct, time_elapsed),
 			flush=True)
 		f.close()
-
-

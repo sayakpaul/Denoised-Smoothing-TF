@@ -4,7 +4,6 @@ from easydict import EasyDict as edict
 from typing import *
 import math
 import matplotlib
-matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 import numpy as np
 import os 

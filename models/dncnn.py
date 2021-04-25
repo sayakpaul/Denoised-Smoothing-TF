@@ -43,4 +43,4 @@ def get_dncnn(data_augmentation, image_size=32, image_chnls=3,
     x = data_augmentation(inputs)
     outputs = run_dncnn(x, depth=depth, n_channels=n_channels)
     outputs = layers.Subtract()([inputs, outputs])
-    return tf.keras.Model(inputs, outputs)
+    return tf.keras.Model(x, outputs)

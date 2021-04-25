@@ -91,7 +91,7 @@ class Smooth(object):
 
             batch = np.expand_dims(x, 0)
             batch = np.repeat(batch, this_batch_size, axis=0)
-            noise = np.random.rand(*batch.shape) * self.sigma
+            noise = np.random.randn(*batch.shape) * self.sigma
             predictions = self.base_classifier.predict(batch + noise).argmax(axis=1)
             counts += self._count_arr(predictions, self.num_classes)
         return counts

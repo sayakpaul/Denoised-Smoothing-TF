@@ -6,12 +6,12 @@ Minimal implementation of [Denoised Smoothing: A Provable Defense for Pretrained
 <div align="center">
 <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/02/DenoisedSmoothingFigure4-1024x246.png" width=700></img><br>
 <small><a href="https://www.microsoft.com/en-us/research/blog/denoised-smoothing-provably-defending-pretrained-classifiers-against-adversarial-examples/">Source</a></small>
-</div>
+</div><br>
 
 * Take a pre-trained classifier and prepend a pre-trained denoiser with it. Of course, the dataset on which the classifier and the denoiser would need to be trained on the same/similar dataset. 
 * Apply [Randomized Smoothing](https://arxiv.org/abs/1902.02918). 
 
-Randomized Smoothing is well-tested method to provably defend against _l2_ adversarial attacks under a specific radii. But it assumes that a classifier performs well under Gaussian noisy perturbations which may not always be the case.  
+Randomized Smoothing is a well-tested method to provably defend against _l2_ adversarial attacks under a specific radii. But it assumes that a classifier performs well under Gaussian noisy perturbations which may not always be the case.  
 
 **Note**: I utilized many scripts from the [official repository](https://github.com/microsoft/denoised-smoothing) of Denoised Smoothing to develop this repository. My aim with this repository is to provide a template for researchers to conduct certification tests with Keras/TensorFlow models. I encourage the readers to check out the original repository, it's really well-developed. 
 

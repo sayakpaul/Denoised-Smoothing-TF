@@ -40,3 +40,18 @@ The models are available inside [`models.tar.gz`](https://github.com/sayakpaul/D
 
 * [Hadi Salman](https://hadisalman.com/) (first author of Denoised Smoothing) for fruitful discussions. 
 * [ML-GDE program](https://developers.google.com/programs/experts/) for providing GCP credits. 
+
+## Paper citation
+```
+@inproceedings{NEURIPS2020_f9fd2624,
+ author = {Salman, Hadi and Sun, Mingjie and Yang, Greg and Kapoor, Ashish and Kolter, J. Zico},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {21945--21957},
+ publisher = {Curran Associates, Inc.},
+ title = {Denoised Smoothing: A Provable Defense for Pretrained Classifiers},
+ url = {https://proceedings.neurips.cc/paper/2020/file/f9fd2624beefbc7808e4e405d73f57ab-Paper.pdf},
+ volume = {33},
+ year = {2020}
+}
+```

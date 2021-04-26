@@ -31,7 +31,7 @@ from tensorflow.keras.layers import (
 from tensorflow.keras.layers import AveragePooling2D, GlobalAvgPool2D, Dropout
 from tensorflow.keras.regularizers import l2
 
-WEIGHT_DECAY = 5e-4
+WEIGHT_DECAY = 0.0005
 
 
 def stem(inputs):

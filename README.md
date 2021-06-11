@@ -24,7 +24,7 @@ Randomized Smoothing is a well-tested method to provably defend against _l2_ adv
 
 All the notebooks can be executed on Colab! You also have the option to train using the free TPUs.
 
-If you run into `TypeError: Input 'y' of 'AddV2' Op has type float64 that does not match type float32 of argument 'x'` error while training the denoiser, try the following (https://github.com/sayakpaul/Denoised-Smoothing-TF/issues/1):
+If you run into `TypeError: Input 'y' of 'AddV2' Op has type float64 that does not match type float32 of argument 'x'` error while training the denoiser, try the following ([#1](https://github.com/sayakpaul/Denoised-Smoothing-TF/issues/1)):
 
 ```python
 noise = tf.experimental.numpy.random.randn(batch_size, 32, 32, 3) * self.sigma

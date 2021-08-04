@@ -1,5 +1,5 @@
 # Denoised-Smoothing-TF
-Minimal implementation of [Denoised Smoothing: A Provable Defense for Pretrained Classifiers](https://arxiv.org/abs/2003.01908) in TensorFlow. 
+Minimal implementation of [Denoised Smoothing: A Provable Defense for Pretrained Classifiers](https://arxiv.org/abs/2003.01908) in TensorFlow. This implementation is now a part of [Neural Structured Learning](https://github.com/tensorflow/neural-structured-learning/tree/master/research/third_party/denoised_smoothing).
 
 **Denoised Smoothing** is a simple and elegant way to (provably) robustify pre-trained image classification models (including the cloud APIs with only query access) and _l2_ adversarial attacks. [This blog post](https://www.microsoft.com/en-us/research/blog/denoised-smoothing-provably-defending-pretrained-classifiers-against-adversarial-examples/) provides a nice introduction to the method. The figure below summarizes what Denoised Smoothing is and how it works:
 
